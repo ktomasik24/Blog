@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+    <div class="container">
+        <div id="post-container">
+            <div class="post">
+                <h2>First Blog Post</h2>
+                <p>Posted on <em>February 6, 2025</em></p>
+                <p>This is my first blog post. Excited to start this journey!</p>
+            </div>
+            <div class="post">
+                <h2>Another Day, Another Post</h2>
+                <p>Posted on <em>February 5, 2025</em></p>
+                <p>Writing about my experiences and thoughts here.</p>
+            </div>
+        </div>
+        <div class="new-post">
+            <h2>Add a New Post</h2>
+            <input type="text" id="post-title" placeholder="Post Title">
+            <textarea id="post-content" placeholder="Write your post..."></textarea>
+            <button onclick="addPost()">Publish</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Personal Blog</p>
+    </footer>
+    <script>
+        function addPost() {
+            let title = document.getElementById('post-title').value;
+            let content = document.getElementById('post-content').value;
+            let postContainer = document.getElementById('post-container');
+            
+            if (title.trim() === "" || content.trim() === "") {
+                alert("Please enter a title and content for your post.");
+                return;
+            }
+            
+            let newPost = document.createElement('div');
+            newPost.classList.add('post');
+            newPost.innerHTML = `<h2>${title}</h2><p>Posted on <em>${new Date().toDateString()}</em></p><p>${content}</p>`;
+            
+            postContainer.prepend(newPost);
+            
+            document.getElementById('post-title').value = "";
+            document.getElementById('post-content').value = "";
+        }
+    </script>
+</body>
+</html>
