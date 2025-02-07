@@ -1,0 +1,66 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+header {
+    background: #6a0572;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #3e206d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+.post {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #7b2cbf;
+}
+.post h2 {
+    color: #ff69b4;
+}
+.new-post {
+    margin-top: 20px;
+    padding: 15px;
+    background: #4a148c;
+    border-radius: 8px;
+}
+.new-post input, .new-post textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.new-post button {
+    background: #ff69b4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.new-post button:hover {
+    background: #e91e63;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #6a0572;
+    color: white;
+    margin-top: 30px;
+    font-size: 1rem;
+}
